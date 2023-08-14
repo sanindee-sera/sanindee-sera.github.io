@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Payment Details</title>
+    <script src="payment.js" defer></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
+</head>
+<body>
+
+    <header class="headerdet">
+        <div class="headerdet-content">
+            <h1 class="heading">Payment Details</h1>
+            <p class="subheading">Enter your payment information </p>
+        </div>
+        <img src="images/logo.png" alt="Cover Photo" class="cover-photo"> 
+    </header>
+    <div class="contentlinkstick">
+        <nav class="booking-links">
+          <ul>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="details.html">Details</a></li>
+            <li><a href="payment.html">Payment</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    <main>
+        <section class="payment-section">
+            <h2>Payment details</h2>
+            <form id="payment-form">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required placeholder="1234-1234-134-1234" onchange="cardNum()" >
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required  onchange="expieryDate()">
+                <label for="cvc">CVC / CVV:</label>
+                <input type="text" id="cvc" name="cvc" required maxlength="3" placeholder="343"  onchange="cvc()">
+                <label for="nameOnCard">Name on Card:</label>
+                <input type="text" id="nameOnCard" name="nameOnCard" required placeholder="sani ser" maxlength="50"  onchange="nameOnCard()">
+              
+                <div>
+                
+                    <button type="submit" id="payButton" href="confirmation.html">Pay = Total Charges: $<span id="summaryTotalCharges"></span><span id="payAmount"></span></button>
+               
+            </div>
+            
+            </form>
+
+            <a href="confirmation.html" class="confirmation-link">Go to Confirmation Page</a>
+        
+            
+        </section>
+
+       
+
+        
+    </main>
+
+
+   
+
+    <div class="right-column">
+        <div class="summarytable">
+          <h2>Summary</h2>
+          <p>Date: <span id="summaryDate"></span></p>
+          <p>Selected Time Slots: <span id="summarytableTimeSlots"></span></p>
+          <p>Selected Ticket Categories: <span id="summaryTicketCategories"></span></p>
+          <p>Total Tickets: <span id="summaryTotalTickets"></span></p>
+          <p>Total Charges: $<span id="summaryTotalCharges"></span></p>
+          <p><strong>Full Name:</strong> <span id="summaryFullName"></span></p>
+          <p><strong>Mobile Number:</strong> <span id="summaryMobileNumber"></span></p>
+          <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+          <p><strong>Confirmed Email:</strong> <span id="summaryConfirmedEmail"></span></p>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+   
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
+</body>
+</html>
